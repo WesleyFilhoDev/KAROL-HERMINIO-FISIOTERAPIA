@@ -1,0 +1,271 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.hero {
+  height: calc(100vh - 20px);
+  width: 100%;
+  box-sizing: border-box;
+  /* Adicionamos Flexbox no hero para conseguir centralizar a pílula */
+  display: flex;
+  flex-direction: column; /* Coloca os elementos em coluna */
+  align-items: center; /* Centraliza a pílula horizontalmente */
+  padding-top: 20px; /* Dá uma distância do topo da tela do navegador */
+  background-color: #f8f5f2; /* (Opcional) Apenas para ver o fundo do hero */
+  margin-bottom: 100px; /* Dá uma distância do final do hero para o próximo conteúdo */
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  /* Mudamos de space-between para alignar os itens juntos com espaço controlado */
+  //justify-content: space-between;
+  align-items: center;
+  background-color: #ffffffff;
+  border-radius: 50px;
+  width: auto;
+  height: 80px;
+  gap: 5px; /* Espaço entre os elementos da navbar */
+
+  /* IMPORTANTE: Adicione um padding lateral para afastar das bordas da pílula */
+  padding: 0 45px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(239, 114, 135, 0.05) 30%,
+    rgba(239, 114, 135, 0.2) 50%,
+    /* Ponto alto do reflexo */ rgba(239, 114, 135, 0.05) 70%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+
+  /* Usa 'alternate' para ir e voltar de forma contínua e fluida */
+  animation: vidroVaiVem 6s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 50px; /* Espaço entre os links */
+  margin: 0;
+  //padding: 13px 0; /* Ajuste o padding vertical conforme necessário */
+}
+
+.navbar ul li a {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #4f4a4c;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #ef7287; /* Substitua pelo tom de rosa/vinho da sua marca */
+  transform: translateY(-2px); /* Dá uma leve erguida super elegante no texto */
+}
+
+.logo {
+  height: 65px; /* Ajuste conforme a proporção real da sua logo */
+  width: auto; /* Mantém a proporção da imagem */
+}
+
+.navbar .logo,
+.navbar ul {
+  position: relative;
+  z-index: 2; /* Fica acima da luz, permitindo que os links funcionem e recebam o hover */
+}
+
+@keyframes vidroVaiVem {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 0%; /* Desliza para o outro lado e inverte o sentido automaticamente */
+  }
+}
+
+/* Estrutura principal do conteúdo abaixo da navbar */
+.conteudo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Espaça bem o texto da imagem */
+  width: 100%;
+  max-width: 1200px; /* Limita a largura máxima para não esticar demais em monitores grandes */
+  flex: 1; /* Faz o conteúdo ocupar todo o restante da altura da tela do hero */
+  padding: 0 80px;
+  box-sizing: border-box;
+}
+
+/* Bloco de texto à esquerda */
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o texto e o botão à esquerda */
+  text-align: left;
+  max-width: 650px;
+}
+
+.left h1 {
+  font-size: 60px;
+  font-family: "Playfair Display bold", serif;
+  color: #4f4a4c;
+  margin-bottom: 1px;
+}
+
+.left p {
+  font-size: 23px;
+  font-family: "Montserrat", sans-serif;
+  color: #635b5e;
+  margin-bottom: 30px;
+}
+
+/* Botão de Chamada para Ação (CTA) */
+.action1 {
+  background-color: #ef7287; /* Cor rosa da marca */
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 35px;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(239, 114, 135, 0.3);
+  transition: all 0.3s ease;
+}
+
+.action1:hover {
+  background-color: #d95f73;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(239, 114, 135, 0.4);
+}
+
+/* Bloco da imagem à direita */
+.rigth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rigth img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px; /* Controla a altura máxima para caber perfeitamente na tela */
+  object-fit: contain;
+}
+
+//Section essencia
+
+/* Seção Essência */
+.essencia {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f5f2;
+  margin-bottom: 100px; /* Dá uma distância do final da seção para o próximo conteúdo */
+}
+
+.conteudo2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  //max-width: 1200px;
+  //gap: 10px;
+  box-sizing: border-box;
+  //margin-top: 198px;
+}
+
+.left2 {
+  flex: 1;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left2 img {
+  max-width: auto;
+  height: auto;
+  max-height: 520px;
+  object-fit: cover;
+  margin-left: 20vh;
+}
+
+.rigth2 {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  margin-right: 38vh;
+}
+
+.rigth2 h1 {
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  color: #ef7287;
+  letter-spacing: 15%;
+  text-transform: uppercase;
+}
+
+.rigth2 h2 {
+  font-size: 40px;
+  font-family: "Playfair Display bold", serif;
+  color: #2c2528;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.rigth2 h2 em {
+  font-style: italic;
+  color: #ef7287;
+}
+
+.rigth2 p {
+  font-size: 20px;
+  font-family: "Montserrat regular", sans-serif;
+  color: #635b5e;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.rigth2 p:nth-last-of-type(2) {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  letter-spacing: 15%;
+  font-style: italic;
+  color: #2c2528;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  text-align: right;
+}
+
+.rigth2 p:nth-last-of-type(1) {
+  font-family: "Montserrat medium", sans-serif;
+  font-size: 16px;
+  letter-spacing: 15%;
+  color: #2c2528;
+  margin-bottom: 0;
+  text-align: right;
+}
