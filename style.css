@@ -2,35 +2,35 @@ html {
   scroll-behavior: smooth;
 }
 
+a.action1, a.action2 {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
 .hero {
   height: calc(100vh - 20px);
   width: 100%;
   box-sizing: border-box;
-  /* Adicionamos Flexbox no hero para conseguir centralizar a pílula */
   display: flex;
-  flex-direction: column; /* Coloca os elementos em coluna */
-  align-items: center; /* Centraliza a pílula horizontalmente */
-  padding-top: 20px; /* Dá uma distância do topo da tela do navegador */
-  background-color: #f8f5f2; /* (Opcional) Apenas para ver o fundo do hero */
-  margin-bottom: 100px; /* Dá uma distância do final do hero para o próximo conteúdo */
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  background-color: #f8f5f2;
+  margin-bottom: 100px;
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
-  /* Mudamos de space-between para alignar os itens juntos com espaço controlado */
-  //justify-content: space-between;
   align-items: center;
-  background-color: #ffffffff;
+  background-color: #ffffff;
   border-radius: 50px;
   width: auto;
   height: 80px;
-  gap: 5px; /* Espaço entre os elementos da navbar */
-
-  /* IMPORTANTE: Adicione um padding lateral para afastar das bordas da pílula */
+  gap: 5px;
   padding: 0 45px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-
   position: relative;
   overflow: hidden;
 }
@@ -47,12 +47,10 @@ html {
     transparent 0%,
     rgba(239, 114, 135, 0.05) 30%,
     rgba(239, 114, 135, 0.2) 50%,
-    /* Ponto alto do reflexo */ rgba(239, 114, 135, 0.05) 70%,
+    rgba(239, 114, 135, 0.05) 70%,
     transparent 100%
   );
   transform: skewX(-20deg);
-
-  /* Usa 'alternate' para ir e voltar de forma contínua e fluida */
   animation: vidroVaiVem 6s ease-in-out infinite alternate;
   z-index: 1;
 }
@@ -61,9 +59,8 @@ html {
   display: flex;
   flex-direction: row;
   list-style: none;
-  gap: 50px; /* Espaço entre os links */
+  gap: 50px;
   margin: 0;
-  //padding: 13px 0; /* Ajuste o padding vertical conforme necessário */
 }
 
 .navbar ul li a {
@@ -76,19 +73,19 @@ html {
 }
 
 .navbar ul li a:hover {
-  color: #ef7287; /* Substitua pelo tom de rosa/vinho da sua marca */
-  transform: translateY(-2px); /* Dá uma leve erguida super elegante no texto */
+  color: #ef7287;
+  transform: translateY(-2px);
 }
 
 .logo {
-  height: 65px; /* Ajuste conforme a proporção real da sua logo */
-  width: auto; /* Mantém a proporção da imagem */
+  height: 65px;
+  width: auto;
 }
 
 .navbar .logo,
 .navbar ul {
   position: relative;
-  z-index: 2; /* Fica acima da luz, permitindo que os links funcionem e recebam o hover */
+  z-index: 2;
 }
 
 @keyframes vidroVaiVem {
@@ -96,28 +93,26 @@ html {
     left: -50%;
   }
   100% {
-    left: 0%; /* Desliza para o outro lado e inverte o sentido automaticamente */
+    left: 0%;
   }
 }
 
-/* Estrutura principal do conteúdo abaixo da navbar */
 .conteudo {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between; /* Espaça bem o texto da imagem */
+  justify-content: space-between;
   width: 100%;
-  max-width: 1200px; /* Limita a largura máxima para não esticar demais em monitores grandes */
-  flex: 1; /* Faz o conteúdo ocupar todo o restante da altura da tela do hero */
+  max-width: 1200px;
+  flex: 1;
   padding: 0 80px;
   box-sizing: border-box;
 }
 
-/* Bloco de texto à esquerda */
 .left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinha o texto e o botão à esquerda */
+  align-items: flex-start;
   text-align: left;
   max-width: 650px;
 }
@@ -136,9 +131,8 @@ html {
   margin-bottom: 30px;
 }
 
-/* Botão de Chamada para Ação (CTA) */
 .action1 {
-  background-color: #ef7287; /* Cor rosa da marca */
+  background-color: #ef7287;
   color: #ffffff;
   border: none;
   border-radius: 50px;
@@ -157,7 +151,6 @@ html {
   box-shadow: 0 8px 25px rgba(239, 114, 135, 0.4);
 }
 
-/* Bloco da imagem à direita */
 .rigth {
   display: flex;
   justify-content: center;
@@ -167,11 +160,9 @@ html {
 .rigth img {
   max-width: 100%;
   height: auto;
-  max-height: 500px; /* Controla a altura máxima para caber perfeitamente na tela */
+  max-height: 500px;
   object-fit: contain;
 }
-
-//Section essencia
 
 /* Seção Essência */
 .essencia {
@@ -181,19 +172,16 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f5f2;
-  margin-bottom: 100px; /* Dá uma distância do final da seção para o próximo conteúdo */
-}
+  background-color: #ffffff;
+} 
 
 .conteudo2 {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
-  //max-width: 1200px;
-  //gap: 10px;
   box-sizing: border-box;
-  //margin-top: 198px;
+  margin-bottom: 100px;
 }
 
 .left2 {
@@ -232,7 +220,7 @@ html {
 .rigth2 h2 {
   font-size: 40px;
   font-family: "Playfair Display bold", serif;
-  color: #2c2528;
+  color: #4F4A4C;
   text-align: right;
   margin-bottom: 10px;
 }
@@ -266,6 +254,801 @@ html {
   font-size: 16px;
   letter-spacing: 15%;
   color: #2c2528;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   text-align: right;
+}
+
+.action2 {
+  background-color: #ef7287;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(239, 114, 135, 0.3);
+  transition: all 0.3s ease;
+}
+
+.action2:hover {
+  background-color: #d95f73;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(239, 114, 135, 0.4);
+}
+
+/* SECTION PILARES */
+.pilares {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f8f5f2; /* Altere esta cor de fundo conforme desejar */
+  padding: 80px 20px;
+}
+
+.conteudo3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.textos {
+  text-align: center;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.textos h1 {
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  color: #ef7287;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.textos h2 {
+  font-size: 40px;
+  font-family: "Playfair Display bold", serif;
+  color: #4F4A4C;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.cards > div {
+  flex: 1;
+  min-width: 220px;
+  max-width: 250px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cards img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.cards .titulo {
+  font-family: "Playfair Display bold", serif;
+  font-size: 22px;
+  color: #0f0f0f;
+  margin-bottom: 12px;
+}
+
+.cards .descricao {
+  text-align: left;
+  font-family: "Montserrat regular", sans-serif;
+  font-size: 16px;
+  color: #635b5e;
+  line-height: 1.6;
+}
+
+/* SECTION ATENDIMENTOS */
+.atendimentos {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff; /* Mantém o fundo padrão do site */
+  padding: 80px 20px;
+}
+
+.conteudo4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.atendimentos .titulo {
+  text-align: center;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.atendimentos .titulo h1 {
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  color: #ef7287;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.atendimentos .titulo h2 {
+  font-size: 40px;
+  font-family: "Playfair Display bold", serif;
+  color: #4F4A4C;
+}
+
+.atendimentos .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Estilo individual de cada card grande */
+.card-atendimento {
+  background-color: #fcf9f6; /* Tom levemente diferenciado ou #ffffff se preferir */
+  border: 1px solid #f0eae1;
+  border-radius: 20px;
+  padding: 40px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-atendimento:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(239, 114, 135, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header h3 {
+  font-family: "Playfair Display bold", serif;
+  font-size: 26px;
+  color: #4F4A4C;
+}
+
+.card-header img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.descricao-card {
+  font-family: "Montserrat regular", sans-serif;
+  font-size: 16px;
+  color: #635b5e;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.link-acao {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ef7287;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.link-acao:hover {
+  color: #d95f73;
+  text-decoration: underline;
+}
+
+/* SECTION CONTATO E RODAPÉ */
+/* SECTION CONTATO E RODAPÉ */
+.contato {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f8f5f2;
+}
+
+.conteudo5 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* Garante que ambos os lados (foto e texto) estiquem para ter a mesma altura */
+  width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+/* Bloco da foto à esquerda ocupando 100% da altura do conteúdo */
+.contato .foto {
+  flex: 1;
+  display: flex;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.contato .foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem cobrir todo o espaço preenchendo a altura e largura proporcionalmente */
+  display: block;
+}
+
+/* Bloco de textos à direita */
+.contato .textos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente o texto em relação à altura da foto */
+  align-items: flex-start;
+  padding: 0 10% 0 8%;
+  box-sizing: border-box;
+}
+
+.contato .textos h1 {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  color: #ef7287;
+  letter-spacing: 15%;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.contato .textos h2 {
+  font-size: 50px;
+  font-family: "Playfair Display bold", serif;
+  color: #4F4A4C;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+/* Botão do WhatsApp */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ef7287;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 11px 32px;
+  gap: 10px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(239, 114, 135, 0.3);
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+}
+
+.btn-whatsapp:hover {
+  background-color: #d95f73;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(239, 114, 135, 0.4);
+}
+
+.wpp {
+  width: 24px;
+  height: auto;
+}
+
+/* Link do Instagram */
+.instagram-text {
+  font-family: "Montserrat regular", sans-serif;
+  font-size: 15px;
+  color: #635b5e;
+  display: flex;       /* Ajuda a manter tudo alinhado lado a lado de forma fluida */
+  align-items: center; /* Centraliza verticalmente o texto e o link */
+  gap: 5px;            /* Espaço entre a frase e o link do Instagram */
+}
+
+.instagram-text a {
+  color: #635b5e;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center; /* Alinha o texto do link com o ícone internamente */
+  gap: 6px;            /* Espaço entre o "@karolherminio.fisio" e o ícone */
+  transition: color 0.3s ease;
+}
+
+.instagram-text a:hover {
+  color: #ef7287;
+  text-decoration: underline;
+}
+
+.insta {
+  width: 18px;          /* Ajustado para um tamanho proporcional ao texto (pode subir para 20px se preferir) */
+  height: auto;
+  vertical-align: middle; /* Força o alinhamento central vertical com as letras */
+}
+
+/* Rodapé Escuro */
+footer {
+  width: 100%;
+  height: 178px;
+  background-color: #3b3739;
+  padding: 25px 20px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box
+}
+
+footer p {
+  font-family: "Montserrat regular", sans-serif;
+  font-size: 14px;
+  color: #dcd6d0;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+   ========================================== */
+
+img {
+  max-width: 100%;
+}
+
+/* ---------- Tablet / notebook pequeno ---------- */
+@media (max-width: 1024px) {
+  /* HERO */
+  .conteudo {
+    padding: 0 40px;
+    gap: 20px;
+  }
+  .left h1 {
+    font-size: 46px;
+  }
+  .left p {
+    font-size: 19px;
+  }
+  .rigth img {
+    max-height: 420px;
+  }
+
+  /* ESSÊNCIA */
+  .left2 img {
+    margin-left: 5vw;
+    max-height: 440px;
+    max-width: 100%;
+  }
+  .rigth2 {
+    margin-right: 5vw;
+    padding-left: 20px;
+  }
+  .rigth2 h2 {
+    font-size: 32px;
+  }
+  .rigth2 p {
+    font-size: 17px;
+  }
+
+  /* CONTATO */
+  .contato .textos {
+    padding: 0 6% 0 5%;
+  }
+  .contato .textos h2 {
+    font-size: 38px;
+  }
+}
+
+/* ---------- Tablet vertical / celular grande ---------- */
+@media (max-width: 768px) {
+  /* Os <br> do HTML atrapalham a quebra natural do texto */
+  .left p br,
+  .rigth2 p br,
+  .rigth2 h2 br,
+  .contato .textos h2 br {
+    display: none;
+  }
+
+  /* NAVBAR + HERO */
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    margin-bottom: 40px;
+    padding: 15px 15px 40px;
+  }
+  .navbar {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 30px;
+  }
+  .logo {
+    height: 50px;
+  }
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+    padding: 0;
+  }
+  .navbar ul li a {
+    font-size: 15px;
+  }
+
+  .conteudo {
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0 0;
+    gap: 30px;
+  }
+  .left {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+  }
+  .left h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  .left p {
+    font-size: 17px;
+  }
+  .rigth img {
+    max-height: 340px;
+  }
+
+  /* ESSÊNCIA */
+  .essencia {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+  .conteudo2 {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 0;
+  }
+  .left2 img {
+    margin-left: 0;
+    max-height: 380px;
+    width: auto;
+  }
+  .rigth2 {
+    margin-right: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .rigth2 h1 {
+    font-size: 16px;
+  }
+  .rigth2 h2,
+  .rigth2 p,
+  .rigth2 p:nth-last-of-type(2),
+  .rigth2 p:nth-last-of-type(1) {
+    text-align: center;
+  }
+  .rigth2 h2 {
+    font-size: 28px;
+  }
+  .rigth2 p {
+    font-size: 16px;
+  }
+  .rigth2 p:nth-last-of-type(2) {
+    font-size: 22px;
+  }
+
+  /* PILARES */
+  .pilares {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+  .textos {
+    margin-bottom: 40px;
+  }
+  .textos h1 {
+    font-size: 16px;
+  }
+  .textos h2 {
+    font-size: 28px;
+  }
+  .cards {
+    gap: 30px 20px;
+  }
+  .cards > div {
+    flex: 1 1 calc(50% - 20px);
+    min-width: 200px;
+    max-width: none;
+  }
+
+  /* ATENDIMENTOS */
+  .atendimentos {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+  .atendimentos .titulo {
+    margin-bottom: 40px;
+  }
+  .atendimentos .titulo h1 {
+    font-size: 16px;
+  }
+  .atendimentos .titulo h2 {
+    font-size: 28px;
+  }
+  .atendimentos .cards {
+    gap: 25px;
+  }
+  .atendimentos .cards > .card-atendimento {
+    flex: 1 1 100%;
+    min-width: 0;
+    max-width: 100%;
+    padding: 28px;
+  }
+  .card-header h3 {
+    font-size: 22px;
+  }
+
+  /* CONTATO + RODAPÉ */
+  .contato {
+    min-height: auto;
+  }
+  .conteudo5 {
+    flex-direction: column;
+  }
+  .contato .foto {
+    flex: none;
+    height: 380px;
+  }
+  .contato .textos {
+    flex: none;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  .contato .textos h1 {
+    font-size: 22px;
+  }
+  .contato .textos h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+  .instagram-text {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer {
+    height: auto;
+    padding: 25px 20px;
+  }
+  footer p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* ---------- Celular pequeno ---------- */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 14px;
+  }
+  .navbar ul {
+    gap: 6px 14px;
+  }
+  .navbar ul li a {
+    font-size: 14px;
+  }
+
+  .left h1 {
+    font-size: 30px;
+  }
+  .left p {
+    font-size: 16px;
+  }
+  .action1,
+  .action2 {
+    padding: 14px 26px;
+    font-size: 0.95rem;
+  }
+  .rigth img {
+    max-height: 290px;
+  }
+
+  .left2 img {
+    max-height: 320px;
+  }
+  .rigth2 h2 {
+    font-size: 25px;
+  }
+
+  .textos h2,
+  .atendimentos .titulo h2 {
+    font-size: 25px;
+  }
+  .cards > div {
+    flex: 1 1 100%;
+  }
+  .card-atendimento {
+    padding: 22px;
+  }
+
+  .contato .foto {
+    height: 300px;
+  }
+  .contato .textos h2 {
+    font-size: 27px;
+  }
+  .btn-whatsapp {
+    padding: 12px 24px;
+  }
+}
+
+/* ==========================================
+   MENU HAMBÚRGUER
+   ========================================== */
+.menu-toggle {
+  display: none; /* escondido no desktop */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background-color: #4f4a4c;
+  border-radius: 3px;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar.open .menu-toggle span {
+  background-color: #ef7287;
+}
+.navbar.open .menu-toggle span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.navbar.open .menu-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.navbar.open .menu-toggle span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    gap: 0;
+    padding: 10px 20px;
+  }
+
+  /* lista vira um bloco que abre/fecha abaixo da logo */
+  .navbar ul {
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .navbar.open ul {
+    max-height: 320px;
+    padding-bottom: 10px;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #f0eae1;
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 14px 0;
+    font-size: 17px;
+  }
+}
+
+/* ==========================================
+   ANIMAÇÕES NO SCROLL
+   ========================================== */
+body {
+  overflow-x: hidden; /* evita barra horizontal durante as animações laterais */
+}
+
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible {
+  animation: revealUp 0.8s ease both;
+  animation-delay: var(--delay, 0s);
+}
+.reveal.reveal-left.visible {
+  animation-name: revealLeft;
+}
+.reveal.reveal-right.visible {
+  animation-name: revealRight;
+}
+
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes revealLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes revealRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* respeita quem desativou animações no sistema */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.visible {
+    opacity: 1;
+    animation: none;
+  }
 }

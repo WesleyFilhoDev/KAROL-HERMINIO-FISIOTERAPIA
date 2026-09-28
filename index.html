@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karol Herminio Fisioterapia</title>
+    <title>Karoline Herminio Fisioterapia</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="assets/logo_png.png" type="image/x-icon" />
@@ -12,8 +12,13 @@
     <section id="hero" class="hero">
       <nav id="navbar" class="navbar">
         <img src="assets/logo_png.png" alt="Logo" class="logo" />
-        <ul>
-          <li><a href="#inicio">Início</a></li>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menuLista">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul id="menuLista">
+          <li><a href="#hero">Início</a></li>
           <li><a href="#essencia">Essência</a></li>
           <li><a href="#pilares">Pilares</a></li>
           <li><a href="#atendimento">Atendimento</a></li>
@@ -31,7 +36,7 @@
             foco em neuroplasticidade e desenvolvimento funcional. <br />
             Ciência, sensibilidade e acolhimento no conforto do seu lar.
           </p>
-          <button class="action1">Falar com a Fisioterapeuta</button>
+          <a href="https://wa.me/5581998346397?text=Oi%20Karol,%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20tirar%20algumas%20dúvidas%20e%20saber%20mais%20sobre%20o%20atendimento!" target="_blank" class="action1">Falar com a Fisioterapeuta</a>
         </div>
         <div class="rigth">
           <img
@@ -41,6 +46,7 @@
         </div>
       </div>
     </section>
+
     <section class="essencia" id="essencia">
       <div class="conteudo2">
         <div class="left2">
@@ -66,9 +72,94 @@
           </p>
 
           <p>Karoline Hermínio</p>
-          <p>Fisioterapeuta • CREFITO: 12345</p>
+          <p>Fisioterapeuta</p>
+          <a href="https://wa.me/5581998346397?text=Oi%20Karol,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20informações%20sobre%20o%20atendimento." target="_blank" class="action2">Agende sua avaliação</a>
         </div>
       </div>
+    </section>
+
+    <section class="pilares" id="pilares">
+      <div class="conteudo3">
+        <div class="textos">
+          <h1>OS PILARES DO ATENDIMENTO</h1>
+          <h2>Uma abordagem guiada por quatro alicerces</h2>
+        </div>
+        <div class="cards">
+          <div class="card1">
+            <img src="icons/iconMovimento.png" alt="">
+            <p class="titulo">Movimento</p>
+            <p class="descricao">A base da autonomia. Trabalhamos para restaurar a sua liberdade física, focando sempre na funcionalidade do dia a dia.</p>
+          </div>
+          <div class="card2">
+            <img src="icons/iconConexao.png" alt="">
+            <p class="titulo">Conexão</p>
+            <p class="descricao">Resultados reais nascem da confiança. Promovemos um atendimento que valoriza o vínculo entre profissional e paciente.</p>
+          </div>
+          <div class="card3">
+            <img src="icons/iconPasta.png" alt="">
+            <p class="titulo">Cuidado</p>
+            <p class="descricao">Acolhimento no seu espaço. Respeitamos a sua individualidade, levando a excelência clínica para o conforto do seu lar.</p>
+          </div>
+          <div class="card4">
+            <img src="icons/iconDesenvolvimento.png" alt="">
+            <p class="titulo">Desenvolvimento</p>
+            <p class="descricao">Cada conquista importa. Otimizamos a capacidade de adaptação do corpo para alcançar o seu máximo potencial.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="atendimentos" id="atendimento">
+      <div class="conteudo4">
+        <div class="titulo">
+          <h1>Como posso ajudar</h1>
+          <h2>Atendimento focado nas suas necessidades</h2>
+        </div>
+        <div class="cards">
+          <div class="card-atendimento">
+            <div class="card-header">
+              <h3>Fisioterapia Domiciliar</h3>
+              <img src="icons/iconPorta.png" alt="Ícone Casa">
+            </div>
+            <p class="descricao-card">
+              Levamos toda a excelência e estrutura clínica para o conforto do seu lar. Ideal para pacientes que buscam reabilitação funcional com comodidade, segurança e atenção totalmente individualizada.
+            </p>
+            <a href="https://wa.me/5581998346397?text=Oi%20Karol,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20a%20Fisioterapia%20Domiciliar." target="_blank" class="link-acao">Agendar atendimento &rarr;</a>
+          </div>
+
+          <div class="card-atendimento">
+            <div class="card-header">
+              <h3>Avaliação Especializada</h3>
+              <img src="icons/iconPasta.png" alt="Ícone Prancheta">
+            </div>
+            <p class="descricao-card">
+              Um plano terapêutico exclusivo desenhado a partir de uma avaliação detalhada, focado em devolver a autonomia, o movimento e a qualidade de vida.
+            </p>
+            <a href="https://wa.me/5581998346397?text=Oi%20Karol,%20vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20a%20Avaliação%20Especializada." target="_blank" class="link-acao">Agendar atendimento &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contato" id="contato">
+      <div class="conteudo5">
+        <div class="foto">
+          <img src="assets/karolFoto3.jpg" alt="Karoline Hermínio sentada" />
+        </div>
+        <div class="textos">
+          <h1>Vamos conversar?</h1>
+          <h2>O primeiro passo para o <br> seu bem-estar começa aqui.</h2>
+          <a href="https://wa.me/5581998346397?text=Oi%20Karol,%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20tirar%20algumas%20dúvidas%20sobre%20o%20atendimento." target="_blank" class="btn-whatsapp">
+            Agendar via WhatsApp <img class="wpp" src="icons/iconWpp.png" alt="">
+          </a>
+          <p class="instagram-text">
+            Acompanhe no Instagram - <a href="https://www.instagram.com/karolherminio.fisio/" target="_blank">@karolherminio.fisio <img class="insta" src="icons/iconInstagram.png" alt=""></a>
+          </p>
+        </div>
+      </div>
+      <footer>
+        <p>&copy; 2026 Karoline Herminio. Todos os direitos reservados. | Fisioterapeuta</p>
+      </footer>
     </section>
   </body>
 </html>
